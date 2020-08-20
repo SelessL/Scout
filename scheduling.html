@@ -8,16 +8,24 @@
 </head>
 
 <body>
-    <div class='row'>
-        <div id='head'>
-            <h1>Avail</h1>
+
+    <div>
+        <div id="calendar" class="row">
+            
         </div>
-        <div id="content" class="column">
-            A quick blurb will be here to explain our mission.
-            THEN WE NEED A BIG BUTTON THAT SAYS "GET SOME HELPPPP"
+
+        <div id="forms" class="row">
+            <form action="/action_page.php">
+                <input type="checkbox" id="help1" name="help1" value="HTML/CSS">
+                <label for="help1"> I need help with HTML/CSS.</label><br>
+                <input type="checkbox" id="help2" name="help2" value="Javascript/Jquery">
+                <label for="help2"> I need help with Javascript/Jquery</label><br>
+                <input type="text" id="help3" name="help3" value="Comments">
+                <label for="help3">Add any additional comments for your tutor.</label><br><br>
+                <input type="submit" value="Submit">
+            </form>
         </div>
     </div>
-
 
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -30,3 +38,5 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
 </body>
+
+</html>
