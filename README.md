@@ -1,3 +1,5 @@
+<ins>Avail</ins>
+
 This website if for Bootcamp students like us who needs additional help with coding.
 
 When you first click on the webpage, it'll pop up a series of checklist/prompt of what you need help with.
