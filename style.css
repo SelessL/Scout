@@ -9,6 +9,7 @@ h1 {
 
 p{
 
+
 }
 
 #head {
@@ -37,10 +38,3 @@ p{
     opacity: 0;
 }
 
-.leftbox {
-    margin-right:10px;
-}
-
-.rightbox {
-    margin-left:10px;
-}
