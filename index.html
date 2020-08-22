@@ -4,10 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="C:\Users\shelb\OneDrive\Desktop\sandbox\FirstProject\style.css">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-
     <title>Scout</title>
 </head>
 
@@ -26,7 +24,9 @@
                 <input type="submit" value="Submit">
             </form> 
         </div>
-        <div class="column">
+
+        <div class="column" id="chart">
+
             OUR LINE GRAPH WILL BE HERE
         </div>
     </div>
@@ -39,7 +39,11 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="coinpaprika.js"></script>
+    <script>
+        (async () => {
+            console.log(await cp.global());
+        })();
+    </script>
 </body>

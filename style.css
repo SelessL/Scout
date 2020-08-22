@@ -1,3 +1,8 @@
+
+.root {
+    align-content: center;
+}
+
 h1 {
 
 }
@@ -19,4 +24,3 @@ p{
     width: 33%;
     float: left;
 }
-

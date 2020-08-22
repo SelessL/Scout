@@ -1,7 +1,8 @@
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="coinpaprika.js"></script>
-<script>
-    (async () => {
-        console.log(await cp.global());
-    })();
-</script>
+
+
+  var queryURL = "https://github.com/jaggedsoft/coinpaprika-js"; 
+  var currencyEl = "currency"
+  var SubmitBtn = "submit"
+  var date = "timeframe"
+
+
