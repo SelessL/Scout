@@ -4,7 +4,7 @@
 }
 
 h1 {
-
+    font-family: 'Abril Fatface', cursive;
 }
 
 p{
@@ -13,19 +13,28 @@ p{
 }
 
 #head {
+    padding: 15px;
     text-align: center;
     background: rgb(65, 97, 65);
     color: white;
+    height: 150px;
+    width: 100%;
 }
 
-.row {
-    text-align: center;
+.grid-x {
+    width: 100%;
+    position: fixed;
+    top: 100px;
 }
 
 .small-4 {
     background: rgb(216, 164, 33);
-    height: 33%;
-    width: 33%;
-    float: left;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.auto {
+    background: white;
+    opacity: 0;
 }
 

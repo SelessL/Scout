@@ -5,25 +5,32 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+
     <link rel="stylesheet" href="style.css">
+    <!-- Compressed CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
         integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
 
-    <!-- Compressed JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
-        integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fredericka+the+Great&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 
     <title>Scout</title>
     
 </head>
 
 <body>
-
+<!--header-->
     <div id='head'>
         <h1>Scout</h1>
     </div>
+    <!--row-->
     <div class='grid-x grid-padding-x'>
         <div class='cell auto'></div>
+        <!--leftbox content-->
         <div class="cell small-4 leftbox">
             A quick blurb will be here to explain the page.
 
@@ -36,7 +43,10 @@
                 </form> 
         </div>
 
-        <div class="column" id="chart">
+<!--rightbox content-->
+        <div class="cell small-4 rightbox">
+            <p id="currentDay">
+
           OUR LINE GRAPH WILL BE HERE
         </div>
         <div class="cell auto"></div>
@@ -65,8 +75,6 @@
       dateElement.innerHTML = today.format("dddd, MMMM Do YYYY");
       $("#currentDay").append(dateElement);
     console.log(today.format("dddd, MMMM Do YYYY"));</script>
-
-
-
-
+  
+  
 </body>
