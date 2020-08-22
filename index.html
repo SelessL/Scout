@@ -15,7 +15,8 @@
             <h1>Scout</h1>
         </div>
         <div class="column">
-            A quick blurb will be here to explain the page.
+            <p id="currentDay"></p>
+            <p>A quick blurb will be here to explain the page.</p>
             <p><form action="/action_page.php">
                 <label for="currency">Currency Type:</label><br>
                 <input type="text" id="currency" name="currency"><br>
@@ -38,10 +39,14 @@
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="coinpaprika.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    
     <script>
-        (async () => {
-            console.log(await cp.global());
-        })();
-    </script>
+      const today = moment();
+      var dateElement= document.getElementById("currentDay");
+      dateElement.innerHTML = today.format("dddd, MMMM Do YYYY");
+      $("#currentDay").append(dateElement);
+    console.log(today.format("dddd, MMMM Do YYYY"));</script>
+
+
 </body>
