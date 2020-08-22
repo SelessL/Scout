@@ -1,13 +1,21 @@
-This website if for Bootcamp students like us who needs additional help with coding.
+<ins>Scout</ins>
+  
+GitHub Repo:
+    https://github.com/sxiong6901/FirstProject
 
-When you first click on the webpage, it'll pop up a series of checklist/prompt of what you need help with.
+Deployed Site:
+    https://sxiong6901.github.io/FirstProject/
 
-API - An automatic virtual chat assistance will assist you in a series of steps.
+This site is a simple cryptocurrency search tool. When you access the landing page you will be presented with a search box in which you can enter the search criterea for a cryptocurrency of your choosing. The results will display below the search box. 
+This project is being created by Seless Lautzenhiser, Soua Xiong, and Shellby Kelly for the UNCC Full Stack Coding Bootcamp.
 
-If at the end of the chat, things are still not resolved, you will be prompt a calendar.
+API for current cryptocurrencty exchange rates from: https://api.coinpaprika.com/
 
-When you click on the calendar date of when you're available, a time slot of 8AM-5PM timeframe will pop up.
 
-You then click on time slot that you want to sign up for tutoring.
+<ins>User Story</ins>
 
-Tutoring will reserved your time spot and you will be sent a email link to your assigned tutor to attend a zoom meeting.
+As a person who is interested in learning more about cryptocurrency
+
+I want to be able to access a site that will allow me to search for the current exchange rates for the cryptocurrency of my choice
+
+So that I can go into cryptocurrency exchanging with knowledge of current market values.
