@@ -1,28 +1,21 @@
-<ins>Avail</ins>
-    a·vail /əˈvāl/ verb
-1. LITERARY
-    help or benefit.
-    "no amount of struggle availed Charles"
+<ins>Scout</ins>
+  
+GitHub Repo:
+    https://github.com/sxiong6901/FirstProject
 
-This website if for Bootcamp students like us who needs additional help with coding.
+Deployed Site:
+    https://sxiong6901.github.io/FirstProject/
 
-When you first click on the webpage, it'll pop up a series of checklist/prompt of what you need help with.
+This site is a simple cryptocurrency search tool. When you access the landing page you will be presented with a search box in which you can enter the search criterea for a cryptocurrency of your choosing. The results will display below the search box. 
+This project is being created by Seless Lautzenhiser, Soua Xiong, and Shellby Kelly for the UNCC Full Stack Coding Bootcamp.
 
-API - An automatic virtual chat assistance will assist you in a series of steps.
-
-If at the end of the chat, things are still not resolved, you will be prompt a calendar.
-
-When you click on the calendar date of when you're available, a time slot of 8AM-5PM timeframe will pop up.
-
-You then click on time slot that you want to sign up for tutoring.
-
-Tutoring will reserved your time spot and you will be sent a email link to your assigned tutor to attend a zoom meeting.
+API for current cryptocurrencty exchange rates from: https://api.coinpaprika.com/
 
 
 <ins>User Story</ins>
 
-As a Coding Bootcamp student in need of tutoring help beyond what is made available to me through my program
+As a person who is interested in learning more about cryptocurrency
 
-I want to be able to access a website where I can receive help on subjects of my choice immediately through a chat or as a scheduled appointment with a tutor with specialized knowledge pertaining to the areas I seek help in
+I want to be able to access a site that will allow me to search for the current exchange rates for the cryptocurrency of my choice
 
-So that I can complete a project or homework assignment that I am struggling with or so that I can receive additional help on a subject that I have not fully grasped.
+So that I can go into cryptocurrency exchanging with knowledge of current market values.
