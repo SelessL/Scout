@@ -8,15 +8,29 @@ p{
 
 #head {
     text-align: center;
-    font-size: 40px;
     background: rgb(65, 97, 65);
     color: white;
 }
 
-.column {
+.row {
+    text-align: center;
+}
+
+.small-4 {
     background: rgb(216, 164, 33);
-    height: 33%;
-    width: 33%;
-    float: left;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.auto {
+    background: white;
+}
+
+.leftbox {
+    margin-right:10px;
+}
+
+.rightbox {
+    margin-left:10px;
 }
 
