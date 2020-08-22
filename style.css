@@ -9,6 +9,7 @@ h1 {
 
 p{
 
+
 }
 
 #head {
@@ -23,18 +24,8 @@ p{
 
 .small-4 {
     background: rgb(216, 164, 33);
-    border-radius: 25px;
-    padding: 10px;
+    height: 33%;
+    width: 33%;
+    float: left;
 }
 
-.auto {
-    background: white;
-}
-
-.leftbox {
-    margin-right:10px;
-}
-
-.rightbox {
-    margin-left:10px;
-}
