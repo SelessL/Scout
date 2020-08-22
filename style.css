@@ -1,0 +1,22 @@
+h1 {
+
+}
+
+p{
+
+}
+
+#head {
+    text-align: center;
+    font-size: 40px;
+    background: rgb(65, 97, 65);
+    color: white;
+}
+
+.column {
+    background: rgb(216, 164, 33);
+    height: 33%;
+    width: 33%;
+    float: left;
+}
+
