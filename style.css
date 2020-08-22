@@ -4,7 +4,7 @@
 }
 
 h1 {
-
+    font-family: 'Abril Fatface', cursive;
 }
 
 p{
@@ -12,13 +12,18 @@ p{
 }
 
 #head {
+    padding: 15px;
     text-align: center;
     background: rgb(65, 97, 65);
     color: white;
+    height: 150px;
+    width: 100%;
 }
 
-.row {
-    text-align: center;
+.grid-x {
+    width: 100%;
+    position: fixed;
+    top: 100px;
 }
 
 .small-4 {
@@ -29,6 +34,7 @@ p{
 
 .auto {
     background: white;
+    opacity: 0;
 }
 
 .leftbox {
