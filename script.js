@@ -68,3 +68,6 @@ const getPrice = (a) => {
    console.log("Low for coin BTC " + coin + " = " + Low)
    // can also build a for loop and iterate through returnArray logging all values
  })
+
+ savedCoins = JSON.parse(localStorage.getItem(""))
+
