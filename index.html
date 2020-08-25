@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
     integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
 
+
      <!-- Fonts -->
      <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fredericka+the+Great&display=swap"
@@ -52,8 +53,6 @@
 
     </nav>
 
-
-    <!--header-->
     <div id='head'>
         <h1>Scout</h1>
     </div>
@@ -84,39 +83,22 @@
             </form>
         </div>
 
-        <!--rightbox content-->
+
+<!--rightbox content-->
         <div class="cell small-4 rightbox">
             <p id="currentDay">
 
-                OUR LINE GRAPH WILL BE HERE
+          OUR LINE GRAPH WILL BE HERE
         </div>
         <div class="cell auto"></div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
-        integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-
-    <!-- this will include every plugin and utility required by Foundation -->
-    <script src="js/foundation.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
-    <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
-
+    
     <script>
-        const today = moment();
-        var dateElement = document.getElementById("currentDay");
-        dateElement.innerHTML = today.format("dddd, MMMM Do YYYY");
-        $("#currentDay").append(dateElement);
-        console.log(today.format("dddd, MMMM Do YYYY"));</script>
-
+      const today = moment();
+      var dateElement= document.getElementById("currentDay");
+      dateElement.innerHTML = today.format("dddd, MMMM Do YYYY");
+      $("#currentDay").append(dateElement);
+    console.log(today.format("dddd, MMMM Do YYYY"));</script>
+  
 
 </body>

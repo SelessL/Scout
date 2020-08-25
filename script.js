@@ -35,7 +35,6 @@ const getPrice = (a) => {
              })
      })
  }
-
 ////////////////////////////////////////////////////
  getAllPrices(coinArray).then((newArray) => {
    // using spread operator to copy the array -- because these are complex objects
@@ -68,6 +67,3 @@ const getPrice = (a) => {
    console.log("Low for coin BTC " + coin + " = " + Low)
    // can also build a for loop and iterate through returnArray logging all values
  })
-
- savedCoins = JSON.parse(localStorage.getItem(""))
-
