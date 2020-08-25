@@ -5,15 +5,14 @@
 
 h1 {
     font-family: 'Abril Fatface', cursive;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
 }
 
 p{
-
-
+    font-family: 'Merriweather', serif;
 }
 
 #head {
-    padding: 15px;
     text-align: center;
     background: rgb(65, 97, 65);
     color: white;
@@ -30,11 +29,47 @@ p{
 .small-4 {
     background: rgb(216, 164, 33);
     border-radius: 25px;
-    padding: 10px;
+    padding: 20px;
+    margin: 25px;
+    height: 300px;
+    text-align: center;
+    overflow: auto;
+    box-shadow: 10px 10px 5px rgb(51, 51, 51);
 }
 
 .auto {
     background: white;
     opacity: 0;
+}
+
+#selection {
+    font-family: 'Merriweather', serif;
+}
+
+#submit {
+    width: 100px;
+    height: 50px;
+    background: rgb(65, 97, 65);
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+   
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }
 

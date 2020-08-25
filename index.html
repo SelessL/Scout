@@ -11,19 +11,29 @@
     <!-- Compressed CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
         integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
-
-
-
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fredericka+the+Great&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fredericka+the+Great&display=swap"
+        rel="stylesheet">
 
     <title>Scout</title>
-    
+
 </head>
 
 <body>
-<!--header-->
+    <nav>
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <ul class="vertical medium-horizontal menu">
+                    <li><a href="index.html"><i class="fi-list"></i> <span>Home</span></a></li>
+                    <li><a href="resources.html" target="_blank"><i class="fi-list"></i> <span>Resources</span></a></li>
+                    <li><a href="about.html" target="_blank"><i class="fi-list"></i> <span>About</span></a></li>
+                </ul>
+
+    </nav>
+
+
+    <!--header-->
     <div id='head'>
         <h1>Scout</h1>
     </div>
@@ -32,26 +42,38 @@
         <div class='cell auto'></div>
         <!--leftbox content-->
         <div class="cell small-4 leftbox">
-            A quick blurb will be here to explain the page.
+            <p>Scout is designed to help you identify the daily and hourly values of your favorite cryptocurrency. Don't
+                have one? We've provided a list of ten for you!
 
-            <p><form action="/action_page.php">
-                    <label for="currency">Currency Type:</label><br>
-                    <input type="text" id="currency" name="currency"><br><br>
-                    <label for="timeframe">Timeframe</label><br>
-                    <input type="text" id="timeframe" name="timeframe"><br><br>
-                    <button id="submitBtn" value="Submit">Search</button>
-                </form> 
+            <p>
+            <form action="/action_page.php">
+                <label for="selection" id="selection">Choose a Cryptocurrency:</label>
+                <select name="cryptocur" id="cryptocur">
+                    <option value="Bitcoin">Bitcoin</option>
+                    <option value="etherium">Etherium</option>
+                    <option value="xrp">XRP</option>
+                    <option value="bcc">Bitcoin Cash</option>
+                    <option value="xlm">Stellar</option>
+                    <option value="neo">NEO</option>
+                    <option value="ltc">Litecoin</option>
+                    <option value="eos">EOS</option>
+                    <option value="xem">NEM</option>
+                </select>
+                <br><br>
+                <input type="submit" value="Submit" id="submit">
+            </form>
         </div>
 
-<!--rightbox content-->
+        <!--rightbox content-->
         <div class="cell small-4 rightbox">
             <p id="currentDay">
 
-          OUR LINE GRAPH WILL BE HERE
+                OUR LINE GRAPH WILL BE HERE
         </div>
         <div class="cell auto"></div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
+        integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -68,13 +90,13 @@
 
     <script src="coinpaprika.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
-    
+
     <script>
-      const today = moment();
-      var dateElement= document.getElementById("currentDay");
-      dateElement.innerHTML = today.format("dddd, MMMM Do YYYY");
-      $("#currentDay").append(dateElement);
-    console.log(today.format("dddd, MMMM Do YYYY"));</script>
-  
-  
+        const today = moment();
+        var dateElement = document.getElementById("currentDay");
+        dateElement.innerHTML = today.format("dddd, MMMM Do YYYY");
+        $("#currentDay").append(dateElement);
+        console.log(today.format("dddd, MMMM Do YYYY"));</script>
+
+
 </body>
