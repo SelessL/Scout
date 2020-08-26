@@ -65,57 +65,57 @@ const getPrice = (a) => {
     event.preventDefault();
     
     if ("Bitcoin") {
-      var dateElement= document.getElementById("TodaysPrice");
-      dateElement.innerHTML = "$ " + (BTCPrice) + " USD"
-      $("#TodaysPrice").append(dateElement);
+      var coins= document.getElementById("TodaysPrice");
+      coins.innerHTML = "$ " + (BTCPrice) + " USD"
+      $("#TodaysPrice").append(coins);
   
     }
-    if ("ETH") {
-      var dateElement= document.getElementById("TodaysPrice");
-      dateElement.innerHTML = "$ " + (ETHPrice) + " USD"
-      $("#TodaysPrice").append(dateElement);
+    else if ("ETH") {
+      var coins= document.getElementById("TodaysPrice");
+      coins.innerHTML = "$ " + (ETHPrice) + " USD"
+      $("#TodaysPrice").append(coins);
     }
 
     else if ('XRP') {
-      var dateElement= document.getElementById("TodaysPrice");
-      dateElement.innerHTML = "$ " + (XRPPrice) + " USD"
-      $("#TodaysPrice").append(dateElement);
+      var coins= document.getElementById("TodaysPrice");
+      coins.innerHTML = "$ " + (XRPPrice) + " USD"
+      $("#TodaysPrice").append(coins);
     }
 
     else if ('BCC') {
-      var dateElement= document.getElementById("TodaysPrice");
-      dateElement.innerHTML = "$ " + (BCHPrice) + " USD"
-      $("#TodaysPrice").append(dateElement);
+      var coins= document.getElementById("TodaysPrice");
+      coins.innerHTML = "$ " + (BCHPrice) + " USD"
+      $("#TodaysPrice").append(coins);
     }
 
     else if ('XLM') {
-      var dateElement= document.getElementById("TodaysPrice");
-      dateElement.innerHTML = "$ " + (XLMPrice) + " USD"
-      $("#TodaysPrice").append(dateElement);
+      var coins= document.getElementById("TodaysPrice");
+      coins.innerHTML = "$ " + (XLMPrice) + " USD"
+      $("#TodaysPrice").append(coins);
     }
 
     else if ('NEO') {
-      var dateElement= document.getElementById("TodaysPrice");
-      dateElement.innerHTML = "$ " + (NEOPrice) + " USD"
-      $("#TodaysPrice").append(dateElement);
+      var coins= document.getElementById("TodaysPrice");
+      coins.innerHTML = "$ " + (NEOPrice) + " USD"
+      $("#TodaysPrice").append(coins);
     }
 
     else if ('LTE') {
-      var dateElement= document.getElementById("TodaysPrice");
-      dateElement.innerHTML = "$ " + (LTCPrice) + " USD"
-      $("#TodaysPrice").append(dateElement);
+      var coins= document.getElementById("TodaysPrice");
+      coins.innerHTML = "$ " + (LTCPrice) + " USD"
+      $("#TodaysPrice").append(coins);
     }
 
     else if ('EOS') {
-      var dateElement= document.getElementById("TodaysPrice");
-      dateElement.innerHTML = "$ " + (EOSPrice) + " USD"
-      $("#TodaysPrice").append(dateElement);
+      var coins= document.getElementById("TodaysPrice");
+      coins.innerHTML = "$ " + (EOSPrice) + " USD"
+      $("#TodaysPrice").append(coins);
     }
     
     else if ('NEM') {
-      var dateElement= document.getElementById("TodaysPrice");
-      dateElement.innerHTML = "$ " + (XEMPrice) + " USD"
-      $("#TodaysPrice").append(dateElement);
+      var coins= document.getElementById("TodaysPrice");
+      coins.innerHTML = "$ " + (XEMPrice) + " USD"
+      $("#TodaysPrice").append(coins);
       
     }
 
