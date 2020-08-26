@@ -3,18 +3,20 @@ var URL = "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=";
 var currency = "&tsyms=USD"
 var returnArray = [];
 var apiKey = "&api_key=YWq0JeKUpCNYNzFC0ussbsqrj1wviR5a"
-var queryURL = "https://min-api.cryptocompare.com/data/pricemultifull?fsyms="
-var currency = "&tsyms=USD"
-let Price
-let Open
-let High
-let Low
-// async await routine to execute api using ajax for every entry in the
-// coinArray. The array.map function is used to iterate through the coin Array
-// and for every entry ( denoted by c ) it calls getPrice.
-// due the nature of array.map -- the cArray is populated with each Promise
-// for getPrice ... when array.map is completed we execute Promise.all to
-// complete the processing of the promise/ajax calls
+var queryURL = "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=" + apiKey
+
+var BTC = "BTC"
+var ETH = "ETH"
+var XRP = "XRP"
+var BBC = "BBC"
+var XLM = "XLM"
+var Neo = "Neo"
+var LTE = "LTE"
+var EOS = "EOS"
+var NEM = "NEM"
+
+console.log(BTC)
+
 const getAllPrices = async (coinArray) => {
   const cArray = coinArray.map(async c => {
     const response = await getPrice(c)
@@ -35,6 +37,7 @@ const getPrice = (a) => {
              })
      })
  }
+ 
 ////////////////////////////////////////////////////
  getAllPrices(coinArray).then((newArray) => {
    // using spread operator to copy the array -- because these are complex objects
@@ -44,26 +47,87 @@ const getPrice = (a) => {
    console.log("======= Array of Complex Objects  =======")
    console.log(returnArray)
    console.log("Results for 1st item in the array")
-   Price = returnArray[0].BTC.USD.PRICE
-   Open = returnArray[0].BTC.USD.OPENDAY
-   High = returnArray[0].BTC.USD.HIGHDAY
-   Low = returnArray[0].BTC.USD.LOWDAY
-   console.log("Price for coin BTC " + Price)
-   console.log("Opening for coin BTC " + Open)
-   console.log("High for coin BTC " + High)
-   console.log("Low for coin BTC " + Low)
-   console.log("Results for last item in the array")
-   // subtract 1 from the length to determine the last item in Array
-   let t = coinArray.length - 1
-   let coin = coinArray[t]
-   console.log(returnArray[t])
-   Price = returnArray[t][coin].USD.PRICE
-   Open = returnArray[t][coin].USD.OPENDAY
-   High = returnArray[t][coin].USD.HIGHDAY
-   Low = returnArray[t][coin].USD.LOWDAY
-   console.log("Price for coin " + coin + " = " + Price)
-   console.log("Opening for coin BTC " + coin + " = " + Open)
-   console.log("High for coin BTC " + coin + " = " + High)
-   console.log("Low for coin BTC " + coin + " = " + Low)
-   // can also build a for loop and iterate through returnArray logging all values
- })
+   BTCPrice = returnArray[0].BTC.USD.PRICE
+   ETHPrice = returnArray[1].ETH.USD.PRICE
+   XRPPrice = returnArray[2].XRP.USD.PRICE
+   BCHPrice = returnArray[3].BCH.USD.PRICE
+   ADAPrice = returnArray[4].ADA.USD.PRICE
+   XLMPrice = returnArray[5].XLM.USD.PRICE
+   NEOPrice = returnArray[6].NEO.USD.PRICE
+   LTCPrice = returnArray[7].LTC.USD.PRICE
+   EOSPrice = returnArray[8].EOS.USD.PRICE
+   XEMPrice = returnArray[9].XEM.USD.PRICE
+
+
+   console.log("Price for coin BTC = " + BTCPrice + " USD")
+   console.log("Price for coin ETH = " + ETHPrice + " USD") 
+   console.log("Price for coin XRP = " + XRPPrice + " USD")
+   console.log("Price for coin BCH = " + BCHPrice + " USD") 
+   console.log("Price for coin ADA = " + ADAPrice + " USD")
+   console.log("Price for coin XLM = " + XLMPrice + " USD") 
+   console.log("Price for coin NEO = " + NEOPrice + " USD")
+   console.log("Price for coin LTC = " + LTCPrice + " USD") 
+   console.log("Price for coin EOS = " + EOSPrice + " USD")
+   console.log("Price for coin XEM = " + XEMPrice + " USD") 
+  
+
+   $("#Search").on("click",function(event) {
+    event.preventDefault();
+    
+    if (getElementById === "BTC") {
+      var coins= document.getElementById("TodaysPrice");
+      coins.innerHTML = "$ " + (BTCPrice) + " USD"
+      $("#TodaysPrice").append(coins);
+  
+    }
+    else if ("ETH") {
+      var coins= document.getElementById("TodaysPrice");
+      coins.innerHTML = "$ " + (ETHPrice) + " USD"
+      $("#TodaysPrice").append(coins);
+    }
+
+    else if ('XRP') {
+      var coins= document.getElementById("TodaysPrice");
+      coins.innerHTML = "$ " + (XRPPrice) + " USD"
+      $("#TodaysPrice").append(coins);
+    }
+
+    else if ('BCC') {
+      var coins= document.getElementById("TodaysPrice");
+      coins.innerHTML = "$ " + (BCHPrice) + " USD"
+      $("#TodaysPrice").append(coins);
+    }
+
+    else if ('XLM') {
+      var coins= document.getElementById("TodaysPrice");
+      coins.innerHTML = "$ " + (XLMPrice) + " USD"
+      $("#TodaysPrice").append(coins);
+    }
+
+    else if ('NEO') {
+      var coins= document.getElementById("TodaysPrice");
+      coins.innerHTML = "$ " + (NEOPrice) + " USD"
+      $("#TodaysPrice").append(coins);
+    }
+
+    else if ('LTE') {
+      var coins= document.getElementById("TodaysPrice");
+      coins.innerHTML = "$ " + (LTCPrice) + " USD"
+      $("#TodaysPrice").append(coins);
+    }
+
+    else if ('EOS') {
+      var coins= document.getElementById("TodaysPrice");
+      coins.innerHTML = "$ " + (EOSPrice) + " USD"
+      $("#TodaysPrice").append(coins);
+    }
+    
+    else if ('NEM') {
+      var coins= document.getElementById("TodaysPrice");
+      coins.innerHTML = "$ " + (XEMPrice) + " USD"
+      $("#TodaysPrice").append(coins);
+      
+    }
+
+   })
+})
