@@ -5,7 +5,6 @@
 
 h1 {
     font-family: 'Abril Fatface', cursive;
-
     text-shadow: 2px 2px 5px rgb(0, 0, 0);
 
 }
@@ -33,7 +32,7 @@ p{
     background: rgb(216, 164, 33);
     border-radius: 25px;
     padding: 20px;
-    margin: 25px;
+    margin: 35px;
     height: 300px;
     text-align: center;
     overflow: auto;
