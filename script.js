@@ -5,6 +5,18 @@ var returnArray = [];
 var apiKey = "&api_key=YWq0JeKUpCNYNzFC0ussbsqrj1wviR5a"
 var queryURL = "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=" + apiKey
 
+var BTC = "BTC"
+var ETH = "ETH"
+var XRP = "XRP"
+var BBC = "BBC"
+var XLM = "XLM"
+var Neo = "Neo"
+var LTE = "LTE"
+var EOS = "EOS"
+var NEM = "NEM"
+
+console.log(BTC)
+
 const getAllPrices = async (coinArray) => {
   const cArray = coinArray.map(async c => {
     const response = await getPrice(c)
@@ -59,12 +71,10 @@ const getPrice = (a) => {
    console.log("Price for coin XEM = " + XEMPrice + " USD") 
   
 
-
-   
    $("#Search").on("click",function(event) {
     event.preventDefault();
     
-    if ("Bitcoin") {
+    if (getElementById === "BTC") {
       var coins= document.getElementById("TodaysPrice");
       coins.innerHTML = "$ " + (BTCPrice) + " USD"
       $("#TodaysPrice").append(coins);
