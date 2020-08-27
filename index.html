@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Compressed CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
         integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
@@ -14,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fredericka+the+Great&display=swap"
         rel="stylesheet">
+
 
     <title>Scout</title>
 </head>
@@ -32,34 +34,49 @@
         <h1>Scout</h1>
     </div>
     <!--row-->
-    <div class='grid-x grid-padding-x'>
+    <div class='grid-x grid-padding-x overlap'>
         <div class='cell auto'></div>
         <!--leftbox content-->
         <div class="cell small-4 leftbox">
+            <p><img src="https://img.icons8.com/clouds/100/000000/bitcoin-exchange.png" />
             <p>Scout is designed to help you identify the daily and hourly values of your favorite cryptocurrency. Don't
                 have one? We've provided a list of ten for you!
             <p>
             <form action="/action_page.php"> <label for="selection" id="selection">Choose a Cryptocurrency:</label>
                 <select name="cryptocur" id="cryptocur">
 
-                    <option value="Bitcoin">Bitcoin</option>
-                    <option value="etherium">Etherium</option>
-                    <option value="xrp">XRP</option>
-                    <option value="bcc">Bitcoin Cash</option>
-                    <option value="xlm">Stellar</option>
-                    <option value="neo">NEO</option>
-                    <option value="ltc">Litecoin</option>
-                    <option value="eos">EOS</option>
-                    <option value="xem">NEM</option>
-                </select> <br><br> <input type="submit" value="Submit" id="submit"> </form>
+                  <option value = "BTC" id= "Select1" >Bitcoin</option>
+                    <option value = "ETH" id= "Select2" >Etherium</option>
+                    <option value = "XRP" id= "Select3" >XRP</option>
+                    <option value = "BBC" id= "Select4" >Bitcoin Cash</option>
+                    <option value = "XLM" id= "Select5" >Stellar</option>
+                    <option value = "Neo" id= "Select6" >NEO</option>
+                    <option value = "LTE" id= "Select7" >Litecoin</option>
+                    <option value = "EOS" id= "Select8" >EOS</option>
+                    <option value = "NEM" id= "Select9" >NEM</option>
+                </select>
+                <br><br>
+                <input type="submit" value="Submit" id="Search">
+            </form>    
+            </p>
+
         </div>
+
+
         <!--rightbox content-->
         <div class="cell small-4 rightbox">
             <p id="currentDay">
-                OUR LINE GRAPH WILL BE HERE
+            <div>Today's Price</div>
+            <p id="TodaysPrice"></p>
+            <P><input type="reset" value="Reset" id="Clear"></P>
+            <hr>
+            OUR LINE GRAPH WILL BE HERE
+            <canvas id="myChart" width="100" height="100"></canvas>
+
         </div>
         <div class="cell auto"></div>
     </div>
+
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -79,13 +96,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
+    <div class="footer">
+        <p>Authors: Seless Lautzenhiser, Soua (Pa) Xiong, and Shelby Kelly</p>
+    </div>
+
+
     <script>
         const today = moment();
         var dateElement = document.getElementById("currentDay");
         dateElement.innerHTML = today.format("dddd, MMMM Do YYYY");
         $("#currentDay").append(dateElement);
         console.log(today.format("dddd, MMMM Do YYYY"));</script>
-
-
 
 </body>
