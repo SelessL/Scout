@@ -22,12 +22,12 @@ p{
 }
 
 
-/* .grid-x {
+.overlap {
 
     width: 100%;
     position: fixed;
     top: 100px;
-} */
+}
 
 .small-4 {
     background: rgb(216, 164, 33);
