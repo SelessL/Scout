@@ -70,59 +70,62 @@ const getPrice = (a) => {
    console.log("Price for coin EOS = " + EOSPrice + " USD")
    console.log("Price for coin XEM = " + XEMPrice + " USD") 
   
+  
 
    $("#Search").on("click",function(event) {
     event.preventDefault();
     
-    if (getElementById === "BTC") {
+    var cryptoCur = document.getElementById("cryptocur").value
+
+    if (cryptoCur == "BTC") {
       var coins= document.getElementById("TodaysPrice");
       coins.innerHTML = "$ " + (BTCPrice) + " USD"
       $("#TodaysPrice").append(coins);
   
     }
-    else if ("ETH") {
+    else if (cryptoCur == "ETH") {
       var coins= document.getElementById("TodaysPrice");
       coins.innerHTML = "$ " + (ETHPrice) + " USD"
       $("#TodaysPrice").append(coins);
     }
 
-    else if ('XRP') {
+    else if (cryptoCur == 'XRP') {
       var coins= document.getElementById("TodaysPrice");
       coins.innerHTML = "$ " + (XRPPrice) + " USD"
       $("#TodaysPrice").append(coins);
     }
 
-    else if ('BCC') {
+    else if (cryptoCur == 'BCC') {
       var coins= document.getElementById("TodaysPrice");
       coins.innerHTML = "$ " + (BCHPrice) + " USD"
       $("#TodaysPrice").append(coins);
     }
 
-    else if ('XLM') {
+    else if (cryptoCur == 'XLM') {
       var coins= document.getElementById("TodaysPrice");
       coins.innerHTML = "$ " + (XLMPrice) + " USD"
       $("#TodaysPrice").append(coins);
     }
 
-    else if ('NEO') {
+    else if (cryptoCur == 'Neo') {
       var coins= document.getElementById("TodaysPrice");
       coins.innerHTML = "$ " + (NEOPrice) + " USD"
       $("#TodaysPrice").append(coins);
     }
 
-    else if ('LTE') {
+    else if (cryptoCur == 'LTE') {
       var coins= document.getElementById("TodaysPrice");
       coins.innerHTML = "$ " + (LTCPrice) + " USD"
       $("#TodaysPrice").append(coins);
     }
 
-    else if ('EOS') {
+    else if (cryptoCur == 'EOS') {
       var coins= document.getElementById("TodaysPrice");
       coins.innerHTML = "$ " + (EOSPrice) + " USD"
       $("#TodaysPrice").append(coins);
     }
     
-    else if ('NEM') {
+    else if (cryptoCur == 'NEM') {
       var coins= document.getElementById("TodaysPrice");
       coins.innerHTML = "$ " + (XEMPrice) + " USD"
       $("#TodaysPrice").append(coins);
