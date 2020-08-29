@@ -63,7 +63,7 @@ const getPrice = (a) => {
 
    $("#Search").on("click",function(event) {
     event.preventDefault();
-    $("Search").re
+    
     
     var cryptoCur = document.getElementById("cryptocur").value
 
