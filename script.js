@@ -5,7 +5,6 @@ var returnArray = [];
 var apiKey = "&api_key=YWq0JeKUpCNYNzFC0ussbsqrj1wviR5a"
 var queryURL = "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=" + apiKey
 
-
 const getAllPrices = async (coinArray) => {
   const cArray = coinArray.map(async c => {
     const response = await getPrice(c)
@@ -26,7 +25,8 @@ const getPrice = (a) => {
              })
      })
  }
- 
+
+
 ////////////////////////////////////////////////////
  getAllPrices(coinArray).then((newArray) => {
    // using spread operator to copy the array -- because these are complex objects
@@ -47,6 +47,29 @@ const getPrice = (a) => {
    EOSPrice = returnArray[8].EOS.USD.PRICE
    XEMPrice = returnArray[9].XEM.USD.PRICE
 
+   console.log("Results for 1st item in the array")
+  
+   var BTCHigh = returnArray[0].BTC.USD.HIGHDAY
+   var ETHHigh = returnArray[1].ETH.USD.HIGHDAY
+   var XRPHigh = returnArray[2].XRP.USD.HIGHDAY
+   var BCHHigh = returnArray[3].BCH.USD.HIGHDAY
+   var ADAHigh = returnArray[4].ADA.USD.HIGHDAY
+   var XLMHigh = returnArray[5].XLM.USD.HIGHDAY
+   var NEOHigh = returnArray[6].NEO.USD.HIGHDAY
+   var LTCHigh = returnArray[7].LTC.USD.HIGHDAY
+   var EOSHigh = returnArray[8].EOS.USD.HIGHDAY
+   var XEMHigh = returnArray[9].XEM.USD.HIGHDAY
+
+   var BTCLow = returnArray[0].BTC.USD.LOWDAY
+   var ETHLow = returnArray[1].ETH.USD.LOWDAY
+   var XRPLow = returnArray[2].XRP.USD.LOWDAY
+   var BCHLow = returnArray[3].BCH.USD.LOWDAY
+   var ADALow = returnArray[4].ADA.USD.LOWDAY
+   var XLMLow = returnArray[5].XLM.USD.LOWDAY
+   var NEOLow = returnArray[6].NEO.USD.LOWDAY
+   var LTCLow = returnArray[7].LTC.USD.LOWDAY
+   var EOSLow = returnArray[8].EOS.USD.LOWDAY
+   var XEMLow = returnArray[9].XEM.USD.LOWDAY
 
    console.log("Price for coin BTC = " + BTCPrice + " USD")
    console.log("Price for coin ETH = " + ETHPrice + " USD") 
@@ -71,36 +94,29 @@ const getPrice = (a) => {
       var coins= document.getElementById("TodaysPrice");
       coins.innerHTML = "$ " + (BTCPrice) + " USD"
       $("#TodaysPrice").append(coins);
+
+
       
     var ctx = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        labels:  ['Low', 'High', 'Today'],
         datasets: [{
             label: 'Bitcoin',
-            data: [{
-              BCHPrice
-              "Time:"
+            data: [BTCLow,BTCHigh,BTCPrice],
 
-            }],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
                 'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
                 'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
             ],
-            borderWidth: 1
+            borderWidth: 2
         }]
     },
     options: {
@@ -124,27 +140,22 @@ const getPrice = (a) => {
     var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        labels: ['Low', 'High', 'Today'],
         datasets: [{
             label: 'ETH',
-            data: [12, 19, 3, 5, 2, 3],
+            data: [ETHLow,ETHHigh,ETHPrice],
+
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
                 'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
                 'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
             ],
-            borderWidth: 1
+            borderWidth: 2
         }]
     },
     options: {
@@ -168,27 +179,21 @@ const getPrice = (a) => {
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        labels:  ['Low', 'High', 'Today'],
         datasets: [{
             label: 'XRP',
-            data: [12, 19, 3, 5, 2, 3],
+            data: [XRPLow,XRPHigh,XRPPrice],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
                 'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
                 'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
             ],
-            borderWidth: 1
+            borderWidth: 2
         }]
     },
     options: {
@@ -212,27 +217,21 @@ var myChart = new Chart(ctx, {
     var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        labels:  ['Low', 'High', 'Today'],
         datasets: [{
             label: 'Bitcoin Cash',
-            data: [12, 19, 3, 5, 2, 3],
+            data: [BCHLow,BCHHigh,BCHPrice],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
                 'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
                 'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
             ],
-            borderWidth: 1
+            borderWidth: 2
         }]
     },
     options: {
@@ -256,27 +255,21 @@ var myChart = new Chart(ctx, {
     var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        labels:  ['Low', 'High', 'Today'],
         datasets: [{
             label: 'XLM',
-            data: [12, 19, 3, 5, 2, 3],
+            data: [XLMLow,XLMHigh,XLMPrice],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
                 'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
                 'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
             ],
-            borderWidth: 1
+            borderWidth: 2
         }]
     },
     options: {
@@ -300,27 +293,21 @@ var myChart = new Chart(ctx, {
     var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        labels:  ['Low', 'High', 'Today'],
         datasets: [{
             label: 'Neo',
-            data: [12, 19, 3, 5, 2, 3],
+            data: [NEOLow,NEOHigh,NEOPrice],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
                 'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
                 'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
             ],
-            borderWidth: 1
+            borderWidth: 2
         }]
     },
     options: {
@@ -344,27 +331,21 @@ var myChart = new Chart(ctx, {
     var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        labels:  ['Low', 'High', 'Today'],
         datasets: [{
             label: 'Litecoin',
-            data: [12, 19, 3, 5, 2, 3],
+            data: [LTELow,LTEHigh,LTEPrice],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
                 'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
                 'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
             ],
-            borderWidth: 1
+            borderWidth: 2
         }]
     },
     options: {
@@ -388,30 +369,21 @@ var myChart = new Chart(ctx, {
     var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        labels:  ['Low', 'High', 'Today'],
         datasets: [{
             label: 'EOS',
-            data: [
-              9579.71,
-
-              ],
+            data: [EOSLow,EOSHigh,EOSPrice],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
                 'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
                 'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
             ],
-            borderWidth: 1
+            borderWidth: 2
         }]
     },
     options: {
@@ -434,32 +406,26 @@ var myChart = new Chart(ctx, {
     var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        labels:  ['Low', 'High', 'Today'],
         datasets: [{
             label: 'NEM',
-            data: [12, 19, 3, 5, 2, 3],
+            data: [XEMLow,XEMHigh,XEMPrice],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
                 'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
                 'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
             ],
-            borderWidth: 1
+            borderWidth: 2
         }]
     },
     options: {
         scales: {
-            yAxes: [{
+            yAxes: [{ 
                 ticks: {
                     beginAtZero: true
                 }
