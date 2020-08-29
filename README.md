@@ -17,6 +17,8 @@ I want to be able to access a site that will allow me to access the current exch
 
 So that I can go into cryptocurrency exchanging with knowledge of current market values.
 
+![Screenshot Deployed](assets/desktopmedium.jpg)
+
 
 This site is a simple cryptocurrency search tool. When you access the landing page you will be presented with a dropdown box in which you can select one of the top 10 cryptocurrencies. The results will display in a box to the right along with a chart displaying historical data. 
 This project is being created by Seless Lautzenhiser, Soua Xiong, and Shellby Kelly for the UNCC Full Stack Coding Bootcamp.
