@@ -107,9 +107,9 @@ const getPrice = (a) => {
             data: [BTCLow,BTCHigh,BTCPrice],
 
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
@@ -146,9 +146,9 @@ const getPrice = (a) => {
             data: [ETHLow,ETHHigh,ETHPrice],
 
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
@@ -184,9 +184,9 @@ var myChart = new Chart(ctx, {
             label: 'XRP',
             data: [XRPLow,XRPHigh,XRPPrice],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
@@ -222,9 +222,9 @@ var myChart = new Chart(ctx, {
             label: 'Bitcoin Cash',
             data: [BCHLow,BCHHigh,BCHPrice],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
@@ -259,9 +259,9 @@ var myChart = new Chart(ctx, {
             label: 'ADA',
             data: [ADALow,ADAHigh,ADAPrice],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
@@ -296,9 +296,9 @@ var myChart = new Chart(ctx, {
             label: 'XLM',
             data: [XLMLow,XLMHigh,XLMPrice],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
@@ -334,9 +334,9 @@ var myChart = new Chart(ctx, {
             label: 'Neo',
             data: [NEOLow,NEOHigh,NEOPrice],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
@@ -372,9 +372,9 @@ var myChart = new Chart(ctx, {
             label: 'Litecoin',
             data: [LTCLow,LTCHigh, LTCPrice],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
@@ -410,9 +410,9 @@ var myChart = new Chart(ctx, {
             label: 'EOS',
             data: [EOSLow,EOSHigh,EOSPrice],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
@@ -447,9 +447,9 @@ var myChart = new Chart(ctx, {
             label: 'NEM',
             data: [XEMLow,XEMHigh,XEMPrice],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
