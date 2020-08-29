@@ -135,3 +135,10 @@ var myLineChart = new Chart(ctx, {
   data: data,
   options: options
 });
+
+
+//responsive navbar
+$(document).foundation();
+var elem = new Foundation.ResponsiveMenu(element, options);
+var elem = new Foundation.ResponsiveToggle(element, options);
+@include foundation-dropdown-menu;
