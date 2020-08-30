@@ -2,7 +2,7 @@
 body {
     background-image: url('assets/bitcoinbg.jpg');
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: local, scroll;
     background-size: cover;
   }
 
@@ -31,10 +31,11 @@ p{
 
 
 .overlap {
-    width: 100%;
+    width: 90%;
     position: fixed;
-    top: 140px;
+    top: 150px;
     overflow:auto;
+    background-attachment: scroll;
 }
 
 
@@ -115,6 +116,7 @@ p{
     overflow: auto;
     box-shadow: 10px 10px 5px rgb(51, 51, 51);
     float: left;
+    background-attachment: scroll;
 }
 
 .leftbox {
