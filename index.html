@@ -38,9 +38,9 @@
     <!--row-->
 
     <div class='grid-x grid-margin-x overlap' id="parent">
-       
+        <div class="cell large-auto" id="opaque"></div>
             <!--leftbox content-->
-            <div class="cell small-12 large-offset-2 leftbox">
+            <div class="cell large-auto" id="content">
                 <p><img src="https://img.icons8.com/clouds/100/000000/bitcoin-exchange.png" />
                 <p>Scout is designed to help you identify the daily values of your favorite cryptocurrency.
                     Don't
@@ -65,14 +65,15 @@
                 </p>
             </div>
             <!--rightbox content-->
-            <div class="cell small-12 large-4 rightbox">
+            <div class="cell large-auto" id="content">
                 <p id="currentDay">
-                <div>Today's Price</div>
+                <p>Today's Price</p>
                 <p id="TodaysPrice"></p>
                 <hr>
                 <p id="chart"></p>
                 <canvas id="myChart" width="100" height="100"></canvas>
             </div>
+            <div class="cell large-auto" id="opaque"></div>
 
 
     </div>
@@ -94,7 +95,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
 
 
-    <div class="footer">
+    <div class="footer hide-for-small-only">
         <p>Authors: Seless Lautzenhiser, Soua (Pa) Xiong, and Shelby Kelly</p>
     </div>
 
