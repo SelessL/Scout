@@ -49,12 +49,71 @@ p{
   opacity: 0.0;
 }
 
-#content{
-
+.overlap {
+  position: fixed;
+  top: 140px;
+  overflow:auto;
+  height: 600px;
+  margin:left;
+  width: 100%;
 }
 
 .card {
   height: 500px;
   width: 350px;
+}
+
+.small-10 {
+  background: rgb(216, 164, 33);
+  text-align: center;
+  border-radius: 25px;
+  padding: 20px;
+  height: 700px;
+  overflow: auto;
+  box-shadow: 10px 10px 5px rgb(51, 51, 51);
+  position: fixed;
+  top: 140px;
+  left: 10%;
+  right: 10%;
+}
+
+#selection {
+  font-family: 'Merriweather', serif;
+}
+
+#submit {
+  width: 100px;
+  height: 50px;
+  background: rgb(65, 97, 65);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.footer {
+  text-align: center;
+  background: rgba(65, 97, 65, 0.836);
+  padding: 35px;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 40px;
 }
 
