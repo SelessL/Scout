@@ -38,10 +38,10 @@
     <!--row-->
 
     <div class='grid-x grid-margin-x overlap' id="parent">
-        <div class="cell">
+        <div class="cell large-auto" id="opaque"></div>
             <!--leftbox content-->
-            <div class="cell small-4 large-offset-2 leftbox">
-                <p><img src="https://img.icons8.com/clouds/100/000000/bitcoin-exchange.png"></p>
+            <div class="cell large-auto" id="content">
+                <p><img src="https://img.icons8.com/clouds/100/000000/bitcoin-exchange.png" />
                 <p>Scout is designed to help you identify the daily and hourly values of your favorite cryptocurrency.
                     Don't have one? We've provided a list of the top ten for you!</p>
                 <p>
@@ -51,10 +51,10 @@
                         <option value="BTC" id="Select1">Bitcoin</option>
                         <option value="ETH" id="Select2">Etherium</option>
                         <option value="XRP" id="Select3">XRP</option>
-                        <option value="BBC" id="Select4">Bitcoin Cash</option>
+                        <option value="BCH" id="Select4">Bitcoin Cash</option>
                         <option value="XLM" id="Select5">Stellar</option>
                         <option value="Neo" id="Select6">NEO</option>
-                        <option value="LTE" id="Select7">Litecoin</option>
+                        <option value="LTC" id="Select7">Litecoin</option>
                         <option value="EOS" id="Select8">EOS</option>
                         <option value="NEM" id="Select9">NEM</option>
                     </select>
@@ -66,12 +66,12 @@
             <!--rightbox content-->
             <div class="cell small-4 rightbox">
                 <p id="currentDay"></p>
-                <div>Today's Price</div>
                 <p id="TodaysPrice"></p>
                 <hr>
                 <p id="chart">OUR LINE GRAPH WILL BE HERE</p>
                 <canvas id="myChart" width="100" height="100"></canvas>
             </div>
+            <div class="cell large-auto" id="opaque"></div>
 
 
         </div>
