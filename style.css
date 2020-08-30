@@ -30,11 +30,11 @@ p{
 }
 
 
-.row {
-
+.overlap {
     width: 100%;
     position: fixed;
     top: 140px;
+    overflow:auto;
 }
 
 
@@ -97,7 +97,7 @@ p{
     background: rgba(65, 97, 65, 0.836);
     padding: 35px;
     position: fixed;
-    bottom: 0;
+    bottom: 0px;
     width: 100%;
     height: 40px;
   }
@@ -115,6 +115,10 @@ p{
     overflow: auto;
     box-shadow: 10px 10px 5px rgb(51, 51, 51);
     float: left;
+}
+
+.leftbox {
+  margin-bottom: 40px;
 }
 
 
