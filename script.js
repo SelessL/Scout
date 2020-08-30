@@ -30,7 +30,6 @@ const getPrice = (a) => {
 ////////////////////////////////////////////////////
  getAllPrices(coinArray).then((newArray) => {
    // using spread operator to copy the array -- because these are complex objects
-   // this is covered later in course when we hit es6
    returnArray = [...newArray]
    // entire array of complex objects
    console.log("======= Array of Complex Objects  =======")
