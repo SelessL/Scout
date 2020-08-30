@@ -46,7 +46,7 @@ p{
 
 #opaque{
   background: white;
-  opacity: 0;
+  opacity: 0.0;
 }
 
 #content{
