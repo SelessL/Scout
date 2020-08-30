@@ -145,7 +145,7 @@ const getPrice = (a) => {
     data: {
         labels: ['Today','Low', 'High',],
         datasets: [{
-            label: "Today's ETH Price",
+            label: "Today's Etherium Price",
             data: [ETHPrice,ETHLow,ETHHigh,],
 
             backgroundColor: [
@@ -469,7 +469,7 @@ var myChart = new Chart(ctx, {
 });
     }
     
-    else if (cryptoCur == 'NEM') {
+    else if (cryptoCur == 'XEM') {
       var coins= document.getElementById("TodaysPrice");
       coins.innerHTML = "Today's Price: $ " + (XEMPrice) + " USD"
       $("#TodaysPrice").append(coins);
