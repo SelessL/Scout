@@ -5,7 +5,6 @@ var returnArray = [];
 var apiKey = "&api_key=YWq0JeKUpCNYNzFC0ussbsqrj1wviR5a"
 var queryURL = "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=" + apiKey
 
-
 const getAllPrices = async (coinArray) => {
   const cArray = coinArray.map(async c => {
     const response = await getPrice(c)
@@ -26,7 +25,8 @@ const getPrice = (a) => {
              })
      })
  }
- 
+
+
 ////////////////////////////////////////////////////
  getAllPrices(coinArray).then((newArray) => {
    // using spread operator to copy the array -- because these are complex objects
@@ -47,6 +47,29 @@ const getPrice = (a) => {
    EOSPrice = returnArray[8].EOS.USD.PRICE
    XEMPrice = returnArray[9].XEM.USD.PRICE
 
+   console.log("Results for 1st item in the array")
+  
+   var BTCHigh = returnArray[0].BTC.USD.HIGHDAY
+   var ETHHigh = returnArray[1].ETH.USD.HIGHDAY
+   var XRPHigh = returnArray[2].XRP.USD.HIGHDAY
+   var BCHHigh = returnArray[3].BCH.USD.HIGHDAY
+   var ADAHigh = returnArray[4].ADA.USD.HIGHDAY
+   var XLMHigh = returnArray[5].XLM.USD.HIGHDAY
+   var NEOHigh = returnArray[6].NEO.USD.HIGHDAY
+   var LTCHigh = returnArray[7].LTC.USD.HIGHDAY
+   var EOSHigh = returnArray[8].EOS.USD.HIGHDAY
+   var XEMHigh = returnArray[9].XEM.USD.HIGHDAY
+
+   var BTCLow = returnArray[0].BTC.USD.LOWDAY
+   var ETHLow = returnArray[1].ETH.USD.LOWDAY
+   var XRPLow = returnArray[2].XRP.USD.LOWDAY
+   var BCHLow = returnArray[3].BCH.USD.LOWDAY
+   var ADALow = returnArray[4].ADA.USD.LOWDAY
+   var XLMLow = returnArray[5].XLM.USD.LOWDAY
+   var NEOLow = returnArray[6].NEO.USD.LOWDAY
+   var LTCLow = returnArray[7].LTC.USD.LOWDAY
+   var EOSLow = returnArray[8].EOS.USD.LOWDAY
+   var XEMLow = returnArray[9].XEM.USD.LOWDAY
 
    console.log("Price for coin BTC = " + BTCPrice + " USD")
    console.log("Price for coin ETH = " + ETHPrice + " USD") 
@@ -59,11 +82,11 @@ const getPrice = (a) => {
    console.log("Price for coin EOS = " + EOSPrice + " USD")
    console.log("Price for coin XEM = " + XEMPrice + " USD") 
   
-  
+
 
    $("#Search").on("click",function(event) {
     event.preventDefault();
-    $("Search").re
+    
     
     var cryptoCur = document.getElementById("cryptocur").value
 
@@ -71,74 +94,391 @@ const getPrice = (a) => {
       var coins= document.getElementById("TodaysPrice");
       coins.innerHTML = "$ " + (BTCPrice) + " USD"
       $("#TodaysPrice").append(coins);
+
+
+      
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels:  ['Low', 'High', 'Today'],
+        datasets: [{
+            label: 'Bitcoin',
+            data: [BTCLow,BTCHigh,BTCPrice],
+
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+            ],
+            borderWidth: 2
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
   
     }
     else if (cryptoCur == "ETH") {
       var coins= document.getElementById("TodaysPrice");
       coins.innerHTML = "$ " + (ETHPrice) + " USD"
       $("#TodaysPrice").append(coins);
+
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Low', 'High', 'Today'],
+        datasets: [{
+            label: 'ETH',
+            data: [ETHLow,ETHHigh,ETHPrice],
+
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+            ],
+            borderWidth: 2
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
     }
 
     else if (cryptoCur == 'XRP') {
       var coins= document.getElementById("TodaysPrice");
       coins.innerHTML = "$ " + (XRPPrice) + " USD"
       $("#TodaysPrice").append(coins);
+
+      var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels:  ['Low', 'High', 'Today'],
+        datasets: [{
+            label: 'XRP',
+            data: [XRPLow,XRPHigh,XRPPrice],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+            ],
+            borderWidth: 2
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
     }
 
-    else if (cryptoCur == 'BCC') {
+    else if (cryptoCur == 'BCH') {
       var coins= document.getElementById("TodaysPrice");
       coins.innerHTML = "$ " + (BCHPrice) + " USD"
       $("#TodaysPrice").append(coins);
-    }
 
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels:  ['Low', 'High', 'Today'],
+        datasets: [{
+            label: 'Bitcoin Cash',
+            data: [BCHLow,BCHHigh,BCHPrice],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+            ],
+            borderWidth: 2
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+    }
+    else if (cryptoCur == 'ADA') {
+      var coins= document.getElementById("TodaysPrice");
+      coins.innerHTML = "$ " + (ADAPrice) + " USD"
+      $("#TodaysPrice").append(coins);
+
+      var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels:  ['Low', 'High', 'Today'],
+        datasets: [{
+            label: 'ADA',
+            data: [ADALow,ADAHigh,ADAPrice],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+            ],
+            borderWidth: 2
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+    }
     else if (cryptoCur == 'XLM') {
       var coins= document.getElementById("TodaysPrice");
       coins.innerHTML = "$ " + (XLMPrice) + " USD"
       $("#TodaysPrice").append(coins);
+
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels:  ['Low', 'High', 'Today'],
+        datasets: [{
+            label: 'XLM',
+            data: [XLMLow,XLMHigh,XLMPrice],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+            ],
+            borderWidth: 2
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
     }
 
     else if (cryptoCur == 'Neo') {
       var coins= document.getElementById("TodaysPrice");
       coins.innerHTML = "$ " + (NEOPrice) + " USD"
       $("#TodaysPrice").append(coins);
+
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels:  ['Low', 'High', 'Today'],
+        datasets: [{
+            label: 'Neo',
+            data: [NEOLow,NEOHigh,NEOPrice],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+            ],
+            borderWidth: 2
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
     }
 
-    else if (cryptoCur == 'LTE') {
+    else if (cryptoCur == 'LTC') {
       var coins= document.getElementById("TodaysPrice");
       coins.innerHTML = "$ " + (LTCPrice) + " USD"
       $("#TodaysPrice").append(coins);
+
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels:  ['Low', 'High', 'Today'],
+        datasets: [{
+            label: 'Litecoin',
+            data: [LTCLow,LTCHigh, LTCPrice],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+            ],
+            borderWidth: 2
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
     }
 
     else if (cryptoCur == 'EOS') {
       var coins= document.getElementById("TodaysPrice");
       coins.innerHTML = "$ " + (EOSPrice) + " USD"
       $("#TodaysPrice").append(coins);
+
+      var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels:  ['Low', 'High', 'Today'],
+        datasets: [{
+            label: 'EOS',
+            data: [EOSLow,EOSHigh,EOSPrice],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+            ],
+            borderWidth: 2
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
     }
     
     else if (cryptoCur == 'NEM') {
       var coins= document.getElementById("TodaysPrice");
       coins.innerHTML = "$ " + (XEMPrice) + " USD"
       $("#TodaysPrice").append(coins);
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels:  ['Low', 'High', 'Today'],
+        datasets: [{
+            label: 'NEM',
+            data: [XEMLow,XEMHigh,XEMPrice],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+            ],
+            borderWidth: 2
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{ 
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
       
     }
 
-    var price = $("#TodaysPrice").append(coins)
-    localStorage.setItem("TodaysPrice", price);
-    renderLastRegistered();
 
    })
-   
-})
 
-var myLineChart = new Chart(ctx, {
-  type: 'line',
-  data: data,
-  options: options
+   
+
+
+
 });
 
 
-//responsive navbar
-$(document).foundation();
-var elem = new Foundation.ResponsiveMenu(element, options);
-var elem = new Foundation.ResponsiveToggle(element, options);
-@include foundation-dropdown-menu;
