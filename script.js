@@ -102,7 +102,7 @@ const getPrice = (a) => {
     data: {
         labels:  ['Low', 'High', 'Today'],
         datasets: [{
-            label: 'Bitcoin',
+            label: 'USD Price for Bitcoin',
             data: [BTCLow,BTCHigh,BTCPrice],
 
             backgroundColor: [
@@ -121,6 +121,10 @@ const getPrice = (a) => {
     options: {
         scales: {
             yAxes: [{
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Price in USD'
+                },
                 ticks: {
                     beginAtZero: true
                 }
@@ -141,7 +145,7 @@ const getPrice = (a) => {
     data: {
         labels: ['Low', 'High', 'Today'],
         datasets: [{
-            label: 'ETH',
+            label: 'USD Price for ETH',
             data: [ETHLow,ETHHigh,ETHPrice],
 
             backgroundColor: [
@@ -180,7 +184,7 @@ var myChart = new Chart(ctx, {
     data: {
         labels:  ['Low', 'High', 'Today'],
         datasets: [{
-            label: 'XRP',
+            label: 'USD Price for XRP',
             data: [XRPLow,XRPHigh,XRPPrice],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.5)',
@@ -218,7 +222,7 @@ var myChart = new Chart(ctx, {
     data: {
         labels:  ['Low', 'High', 'Today'],
         datasets: [{
-            label: 'Bitcoin Cash',
+            label: 'USD Price for Bitcoin Cash',
             data: [BCHLow,BCHHigh,BCHPrice],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.5)',
@@ -255,7 +259,7 @@ var myChart = new Chart(ctx, {
     data: {
         labels:  ['Low', 'High', 'Today'],
         datasets: [{
-            label: 'ADA',
+            label: 'USD Price for ADA',
             data: [ADALow,ADAHigh,ADAPrice],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.5)',
@@ -292,7 +296,7 @@ var myChart = new Chart(ctx, {
     data: {
         labels:  ['Low', 'High', 'Today'],
         datasets: [{
-            label: 'XLM',
+            label: 'USD Price for XLM',
             data: [XLMLow,XLMHigh,XLMPrice],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.5)',
@@ -330,7 +334,7 @@ var myChart = new Chart(ctx, {
     data: {
         labels:  ['Low', 'High', 'Today'],
         datasets: [{
-            label: 'Neo',
+            label: 'USD Price for NEO',
             data: [NEOLow,NEOHigh,NEOPrice],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.5)',
@@ -368,7 +372,7 @@ var myChart = new Chart(ctx, {
     data: {
         labels:  ['Low', 'High', 'Today'],
         datasets: [{
-            label: 'Litecoin',
+            label: 'USD Price for Litecoin',
             data: [LTCLow,LTCHigh, LTCPrice],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.5)',
@@ -406,7 +410,7 @@ var myChart = new Chart(ctx, {
     data: {
         labels:  ['Low', 'High', 'Today'],
         datasets: [{
-            label: 'EOS',
+            label: 'USD Price for EOS',
             data: [EOSLow,EOSHigh,EOSPrice],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.5)',
@@ -443,7 +447,7 @@ var myChart = new Chart(ctx, {
     data: {
         labels:  ['Low', 'High', 'Today'],
         datasets: [{
-            label: 'NEM',
+            label: 'USD Price for NEM',
             data: [XEMLow,XEMHigh,XEMPrice],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.5)',
