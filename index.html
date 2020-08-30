@@ -40,7 +40,7 @@
     <div class='grid-x grid-margin-x overlap' id="parent">
         <div class="cell large-auto" id="opaque"></div>
             <!--leftbox content-->
-            <div class="cell large-auto" id="content">
+            <div class="cell large-4" id="content">
                 <p><img src="https://img.icons8.com/clouds/100/000000/bitcoin-exchange.png" />
                 <p>Scout is designed to help you identify the daily values of your favorite cryptocurrency.
                     Don't
@@ -49,6 +49,7 @@
                 <p>
                 <form action="/action_page.php"> <label for="selection" id="selection">Choose a Cryptocurrency:</label>
                     <select name="cryptocur" id="cryptocur">
+
 
                         <option value="BTC" id="Select1">Bitcoin</option>
                         <option value="ETH" id="Select2">Etherium</option>
@@ -60,6 +61,7 @@
                         <option value="LTC" id="Select7">Litecoin</option>
                         <option value="EOS" id="Select8">EOS</option>
                         <option value="NEM" id="Select9">NEM</option>
+
                     </select>
                     <br><br>
                     <input type="submit" value="Submit" id="Search">
@@ -67,16 +69,16 @@
                 </p>
             </div>
             <!--rightbox content-->
-            <div class="cell large-auto" id="content">
+            <div class="cell large-4" id="content">
                 <p id="currentDay">
                 <p id="TodaysPrice"></p>
                 <hr>
+
 
                 <p id="chart">Cryptocurrency</p>
                 <canvas id="myChart" ></canvas>
             </div>
             <div class="cell large-auto" id="opaque"></div>
-
 
     </div>
 
