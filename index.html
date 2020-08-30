@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    
+
     <nav>
         <div class="top-bar">
             <div class="top-bar-left">
@@ -36,47 +36,46 @@
         <h1>Scout</h1>
     </div>
     <!--row-->
-    <div class='grid-x grid-margin-x row overlap'>
-        <div class='cell auto'></div>
-        <!--leftbox content-->
-        <div class="cell small-4 leftbox">
-            <p><img src="https://img.icons8.com/clouds/100/000000/bitcoin-exchange.png" />
-            <p>Scout is designed to help you identify the daily and hourly values of your favorite cryptocurrency. Don't
-                have one? We've provided a list of the top ten for you!
-            <p>
-            <form action="/action_page.php"> <label for="selection" id="selection">Choose a Cryptocurrency:</label>
-                <select name="cryptocur" id="cryptocur">
 
-                  <option value = "BTC" id= "Select1" >Bitcoin (BTC)</option>
-                    <option value = "ETH" id= "Select2" >Etherium (ETH)</option>
-                    <option value = "XRP" id= "Select3" >Ripple (XRP)</option>
-                    <option value = "ADA" id= "Select4" >Cardano (ADA)</option>
-                    <option value = "BCH" id= "Select4" >Bitcoin Cash</option>
-                    <option value = "XLM" id= "Select5" >Stellar (XLM)</option>
-                    <option value = "Neo" id= "Select6" >NEO</option>
-                    <option value = "LTC" id= "Select7" >Litecoin (LTC)</option>
-                    <option value = "EOS" id= "Select8" >EOS</option>
-                    <option value = "NEM" id= "Select9" >NEM (XEM)</option>
-                </select>
-                <br><br>
-                <input type="submit" value="Submit" id="Search">
-            </form>    
-            </p>
+    <div class='grid-x grid-margin-x overlap' id="parent">
+        <div class="cell">
+            <!--leftbox content-->
+            <div class="cell small-4 large-offset-2 leftbox">
+                <p><img src="https://img.icons8.com/clouds/100/000000/bitcoin-exchange.png" />
+                <p>Scout is designed to help you identify the daily and hourly values of your favorite cryptocurrency.
+                    Don't
+                    have one? We've provided a list of the top ten for you!
+                <p>
+                <form action="/action_page.php"> <label for="selection" id="selection">Choose a Cryptocurrency:</label>
+                    <select name="cryptocur" id="cryptocur">
+
+                        <option value="BTC" id="Select1">Bitcoin</option>
+                        <option value="ETH" id="Select2">Etherium</option>
+                        <option value="XRP" id="Select3">XRP</option>
+                        <option value="BBC" id="Select4">Bitcoin Cash</option>
+                        <option value="XLM" id="Select5">Stellar</option>
+                        <option value="Neo" id="Select6">NEO</option>
+                        <option value="LTE" id="Select7">Litecoin</option>
+                        <option value="EOS" id="Select8">EOS</option>
+                        <option value="NEM" id="Select9">NEM</option>
+                    </select>
+                    <br><br>
+                    <input type="submit" value="Submit" id="Search">
+                </form>
+                </p>
+            </div>
+            <!--rightbox content-->
+            <div class="cell small-4 rightbox">
+                <p id="currentDay">
+                <div>Today's Price</div>
+                <p id="TodaysPrice"></p>
+                <hr>
+                <p id="chart">OUR LINE GRAPH WILL BE HERE</p>
+                <canvas id="myChart" width="100" height="100"></canvas>
+            </div>
+
 
         </div>
-
-
-        <!--rightbox content-->
-        <div class="cell small-4 rightbox">
-            <p id="currentDay">
-                    <div>Today's Price</div>
-                    <p id="TodaysPrice"></p>
-                    <hr>
-
-            <p id= "chart">Crypto Currency Graph</p>
-          <canvas id="myChart"></canvas>
-        </div>
-        <div class="cell auto"></div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
