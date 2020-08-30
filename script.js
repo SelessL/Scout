@@ -91,7 +91,7 @@ const getPrice = (a) => {
 
     if (cryptoCur == "BTC") {
       var coins= document.getElementById("TodaysPrice");
-      coins.innerHTML = "$ " + (BTCPrice) + " USD"
+      coins.innerHTML = "Today's Price: $ " + (BTCPrice) + " USD"
       $("#TodaysPrice").append(coins);
 
 
@@ -132,7 +132,7 @@ const getPrice = (a) => {
     }
     else if (cryptoCur == "ETH") {
       var coins= document.getElementById("TodaysPrice");
-      coins.innerHTML = "$ " + (ETHPrice) + " USD"
+      coins.innerHTML = "Today's Price: $ " + (ETHPrice) + " USD"
       $("#TodaysPrice").append(coins);
 
     var ctx = document.getElementById('myChart').getContext('2d');
@@ -171,7 +171,7 @@ const getPrice = (a) => {
 
     else if (cryptoCur == 'XRP') {
       var coins= document.getElementById("TodaysPrice");
-      coins.innerHTML = "$ " + (XRPPrice) + " USD"
+      coins.innerHTML = "Today's Price: $ " + (XRPPrice) + " USD"
       $("#TodaysPrice").append(coins);
 
       var ctx = document.getElementById('myChart').getContext('2d');
@@ -209,7 +209,7 @@ var myChart = new Chart(ctx, {
 
     else if (cryptoCur == 'BCH') {
       var coins= document.getElementById("TodaysPrice");
-      coins.innerHTML = "$ " + (BCHPrice) + " USD"
+      coins.innerHTML = "Today's Price: $ " + (BCHPrice) + " USD"
       $("#TodaysPrice").append(coins);
 
     var ctx = document.getElementById('myChart').getContext('2d');
@@ -246,7 +246,7 @@ var myChart = new Chart(ctx, {
     }
     else if (cryptoCur == 'ADA') {
       var coins= document.getElementById("TodaysPrice");
-      coins.innerHTML = "$ " + (ADAPrice) + " USD"
+      coins.innerHTML = "Today's Price: $ " + (ADAPrice) + " USD"
       $("#TodaysPrice").append(coins);
 
       var ctx = document.getElementById('myChart').getContext('2d');
@@ -283,7 +283,7 @@ var myChart = new Chart(ctx, {
     }
     else if (cryptoCur == 'XLM') {
       var coins= document.getElementById("TodaysPrice");
-      coins.innerHTML = "$ " + (XLMPrice) + " USD"
+      coins.innerHTML = "Today's Price: $ " + (XLMPrice) + " USD"
       $("#TodaysPrice").append(coins);
 
     var ctx = document.getElementById('myChart').getContext('2d');
@@ -321,7 +321,7 @@ var myChart = new Chart(ctx, {
 
     else if (cryptoCur == 'Neo') {
       var coins= document.getElementById("TodaysPrice");
-      coins.innerHTML = "$ " + (NEOPrice) + " USD"
+      coins.innerHTML = "Today's Price: $ " + (NEOPrice) + " USD"
       $("#TodaysPrice").append(coins);
 
     var ctx = document.getElementById('myChart').getContext('2d');
@@ -359,7 +359,7 @@ var myChart = new Chart(ctx, {
 
     else if (cryptoCur == 'LTC') {
       var coins= document.getElementById("TodaysPrice");
-      coins.innerHTML = "$ " + (LTCPrice) + " USD"
+      coins.innerHTML = "Today's Price: $ " + (LTCPrice) + " USD"
       $("#TodaysPrice").append(coins);
 
     var ctx = document.getElementById('myChart').getContext('2d');
@@ -397,7 +397,7 @@ var myChart = new Chart(ctx, {
 
     else if (cryptoCur == 'EOS') {
       var coins= document.getElementById("TodaysPrice");
-      coins.innerHTML = "$ " + (EOSPrice) + " USD"
+      coins.innerHTML = "Today's Price: $ " + (EOSPrice) + " USD"
       $("#TodaysPrice").append(coins);
 
       var ctx = document.getElementById('myChart').getContext('2d');
@@ -435,7 +435,7 @@ var myChart = new Chart(ctx, {
     
     else if (cryptoCur == 'NEM') {
       var coins= document.getElementById("TodaysPrice");
-      coins.innerHTML = "$ " + (XEMPrice) + " USD"
+      coins.innerHTML = "Today's Price: $ " + (XEMPrice) + " USD"
       $("#TodaysPrice").append(coins);
     var ctx = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(ctx, {
