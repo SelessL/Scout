@@ -16,9 +16,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fredericka+the+Great&display=swap"
         rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-
-
     <title>Scout</title>
+
+    
 </head>
 
 <body>
@@ -40,26 +40,23 @@
     <div class='grid-x grid-margin-x overlap' id="parent">
         <div class="cell large-auto" id="opaque"></div>
             <!--leftbox content-->
-            <div class="cell large-auto" id="content">
+            <div class="cell large-4" id="content">
                 <p><img src="https://img.icons8.com/clouds/100/000000/bitcoin-exchange.png" />
-                <p>Scout is designed to help you identify the daily values of your favorite cryptocurrency.
-                    Don't
-                    have one? We've provided a list of the top ten for you!
-
+                <p>Scout is designed to help you identify the daily and hourly values of your favorite cryptocurrency.
+                    Don't have one? We've provided a list of the top ten for you!
                 <p>
                 <form action="/action_page.php"> <label for="selection" id="selection">Choose a Cryptocurrency:</label>
                     <select name="cryptocur" id="cryptocur">
 
-                        <option value="BTC" >Bitcoin</option>
-                        <option value="ETH" >Etherium</option>
-                        <option value="XRP" >XRP</option>
-                        <option value="BCH" >Bitcoin Cash</option>
-                        <option value="ADA" >Cardano</option>
-                        <option value="XLM" >Stellar</option>
-                        <option value="Neo" >NEO</option>
-                        <option value="LTC" >Litecoin</option>
-                        <option value="EOS" >EOS</option>
-                        <option value="XEM" >NEM</option>
+                        <option value="BTC" id="BTC">Bitcoin</option>
+                        <option value="ETH" id="ETH">Etherium</option>
+                        <option value="XRP" id="XRP">XRP</option>
+                        <option value="BBC" id="BBC">Bitcoin Cash</option>
+                        <option value="XLM" id="XLM">Stellar</option>
+                        <option value="Neo" id="Neo">NEO</option>
+                        <option value="LTE" id="LTE">Litecoin</option>
+                        <option value="EOS" id="EOS">EOS</option>
+                        <option value="NEM" id="NEM">NEM</option>
                     </select>
                     <br><br>
                     <input type="submit" value="Submit" id="Search">
@@ -67,16 +64,15 @@
                 </p>
             </div>
             <!--rightbox content-->
-            <div class="cell large-auto" id="content">
+            <div class="cell large-4" id="content">
                 <p id="currentDay">
+                <p>Today's Price</p>
                 <p id="TodaysPrice"></p>
                 <hr>
-
-                <p id="chart">Cryptocurrency</p>
-                <canvas id="myChart" ></canvas>
+                <p id="chart"></p>
+                <canvas id="myChart" width="100" height="100"></canvas>
             </div>
             <div class="cell large-auto" id="opaque"></div>
-
 
     </div>
 
@@ -97,7 +93,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
 
 
-    <div class="footer hide-for-small-only">
+    <div class="footer">
         <p>Authors: Seless Lautzenhiser, Soua (Pa) Xiong, and Shelby Kelly</p>
     </div>
 
