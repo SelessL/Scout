@@ -4,6 +4,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  height: auto;
 }
 
 .root {
@@ -28,8 +29,6 @@ p{
   height: 150px;
   position: absolute;
   width: 100%;
-  height: auto;
-  overflow: auto;
 }
 
 
